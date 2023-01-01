@@ -6,10 +6,19 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
+    "bootstrap": "^5.2.3",
+    "browserfs": "^1.4.3",
+    "fast-xml-parser": "^4.0.12",
+    "fs": "^0.0.1-security",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.7.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.0"
+    "react-router-dom": "^6.6.1",
+    "react-scripts": "4.0.3",
+    "react-xml-parser": "^1.1.8",
+    "web-vitals": "^2.1.0",
+    "xml2js": "^0.4.23",
+    "xmldom": "^0.6.0"
   },
   "scripts": {
     "start": "react-scripts start",

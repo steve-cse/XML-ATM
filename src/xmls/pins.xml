@@ -1,0 +1,32 @@
+<cards>
+  <card>
+    <number>1234-5678-9012-3456</number>
+    <pin>1234</pin>
+     <name>John Smith</name>
+  </card>
+  <card>
+   <number>2345-6789-0123-4567</number>
+    <pin>5678</pin>
+     <name>David Michael</name>
+  </card>
+  <card>
+   <number>4111-1111-1111-1111</number>
+    <pin>9012</pin>
+     <name>Jane Doe</name>
+  </card>
+  <card>
+    <number>4532-7654-3210-1234</number>
+    <pin>3456</pin>
+    <name>Sarah Carter</name>
+  </card>
+  <card>
+    <number>4916-3050-2688-4060</number>
+    <pin>7890</pin>
+     <name>Jessica Park</name>
+  </card>
+  <card>
+    <number>4333-3333-3333-3333</number>
+    <pin>2468</pin>
+     <name>Christa Evans</name>
+  </card>
+</cards>
