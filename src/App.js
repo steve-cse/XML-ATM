@@ -5,7 +5,7 @@ import Menu from './components/Menu';
 import Withdraw from './components/Withdraw'
 import CheckBal from './components/CheckBal';
 import Deposit from './components/Deposit';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   

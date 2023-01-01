@@ -71,7 +71,7 @@ export default function Withdraw() {
         console.log('balance.xml has been modified')
         setError('')
         setMessage('You withdrew ₹' + balNumRef.current.value)
-        setTimeout(() => navigate("/"), 5000);
+        setTimeout(() => navigate("/"), 3500);
       }
     })
   }

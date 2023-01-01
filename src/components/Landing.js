@@ -11,11 +11,11 @@ export default function Landing() {
   useEffect(() => {
     fs.readFile('xmls/blacklist.xml', 'utf8', (error, data) => {
       if (error) {
-        console.error(error);
+        setError("Error reading XML files");
       } else {
         xml2js.parseString(data, (error, result) => {
           if (error) {
-            console.error(error);
+            setError("Error parsing XML files");
           } else {
             setData(result)
           }

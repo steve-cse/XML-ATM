@@ -24,6 +24,9 @@ export default function Menu() {
           </Card.Body>
 
     </Card>
+    <div className="w-100 text-center mt-3">
+    <p>© 2023 Steve Boby George</p>
+      </div>
     </>
   )
 }
