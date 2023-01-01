@@ -6,7 +6,7 @@
   Micro Project for Advanced Database Management (221TCS001)
 </p>
   <p align="center">
-  Checkout the latest release.
+  Checkout the latest release
     <br />
     <a href="https://github.com/steve-cse/XML-ATM/releases/"><strong>Releases »</strong></a>
     <br />
