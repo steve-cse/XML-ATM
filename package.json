@@ -2,12 +2,14 @@
   "name": "xml-atm",
   "version": "0.1.0",
   "private": true,
+  "main": "public/main.js",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
     "bootstrap": "^5.2.3",
     "browserfs": "^1.4.3",
+    "electron": "^22.0.0",
     "fast-xml-parser": "^4.0.12",
     "fs": "^0.0.1-security",
     "react": "^18.2.0",
@@ -24,7 +26,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "electron-dev": "electron ."
   },
   "eslintConfig": {
     "extends": [

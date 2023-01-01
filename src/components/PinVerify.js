@@ -1,26 +1,27 @@
 import React, { useRef, useState, useEffect } from 'react'
 import { Form, Button, Card, Alert } from 'react-bootstrap'
 import xml2js from 'xml2js'
-import pins from './../xmls/pins.xml'
 import { useNavigate } from 'react-router-dom'
-
+const fs = window.require('fs')
 export default function PinVerify() {
   const pinNumRef = useRef()
   const [data, setData] = useState(null)
   const [error, setError] = useState('')
   const navigate = useNavigate()
   useEffect(() => {
-    fetch(pins)
-      .then((response) => response.text())
-      .then((xml) => {
-        xml2js.parseString(xml, (err, result) => {
-          if (err) {
-            console.error(err)
+    fs.readFile('xmls/pins.xml', 'utf8', (error, data) => {
+      if (error) {
+        console.error(error);
+      } else {
+        xml2js.parseString(data, (error, result) => {
+          if (error) {
+            console.error(error);
           } else {
             setData(result)
           }
-        })
-      })
+        });
+      }
+    });
   }, [])
 
   async function handleSubmit(e) {
@@ -34,7 +35,7 @@ export default function PinVerify() {
     }
     if (index >= 0) {
       if (data.cards.card[index].pin.includes(pinNumRef.current.value)) {
-        console.log('Yay')
+        console.log('Pin verified')
         localStorage.setItem('cc_name', data.cards.card[index].name[0])
         navigate('/menu')
       } else {
@@ -48,7 +49,7 @@ export default function PinVerify() {
     <>
       <Card>
         <Card.Body>
-          <h2 className="text-center mb-4">XML-ATM</h2>
+          <h2 className="text-center mb-4">💸 XML-ATM</h2>
           {error && <Alert variant="danger">{error}</Alert>}
           <Form onSubmit={handleSubmit}>
             <Form.Group id="pin_num">

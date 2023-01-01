@@ -1,26 +1,27 @@
 import React, { useRef, useState, useEffect } from 'react'
 import { Form, Button, Card, Alert } from 'react-bootstrap'
 import xml2js from 'xml2js'
-import blacklist from './../xmls/blacklist.xml'
 import { useNavigate } from 'react-router-dom'
-
+const fs = window.require('fs')
 export default function Landing() {
   const cardNumRef = useRef()
   const [data, setData] = useState(null)
   const [error, setError] = useState('')
   const navigate = useNavigate()
   useEffect(() => {
-    fetch(blacklist)
-      .then((response) => response.text())
-      .then((xml) => {
-        xml2js.parseString(xml, (err, result) => {
-          if (err) {
-            console.error(err)
+    fs.readFile('xmls/blacklist.xml', 'utf8', (error, data) => {
+      if (error) {
+        console.error(error);
+      } else {
+        xml2js.parseString(data, (error, result) => {
+          if (error) {
+            console.error(error);
           } else {
             setData(result)
           }
-        })
-      })
+        });
+      }
+    });
   }, [])
 
   async function handleSubmit(e) {
@@ -37,7 +38,6 @@ export default function Landing() {
       if (data.cards.card[index].blacklisted.includes('true')) {
         setError('This card has been blacklisted')
       } else {
-        console.log(data)
         localStorage.setItem('cc_num', data.cards.card[index].number[0])
         console.log('Card number written to local storage')
         navigate('/pin')
@@ -50,7 +50,7 @@ export default function Landing() {
     <>
       <Card>
         <Card.Body>
-          <h2 className="text-center mb-4">XML-ATM</h2>
+          <h2 className="text-center mb-4">💸 XML-ATM</h2>
           {error && <Alert variant="danger">{error}</Alert>}
           <Form onSubmit={handleSubmit}>
             <Form.Group id="cc_num">

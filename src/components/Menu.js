@@ -15,12 +15,12 @@ export default function Menu() {
     <>
     <Card>
     <Card.Body>
-          <h2 className="text-center mb-4">XML-ATM</h2>
+          <h2 className="text-center mb-4">💸 XML-ATM </h2>
           <h4 className="text-center mb-4">Hello, {name}</h4>
           <h4 className="text-center mb-4">Please Select an Option</h4>
           <Button onClick={() => navigate("/withdraw")} className="btn btn-primary w-100 mt-3">Withdraw</Button>
-          <Button onClick={() => navigate("/about")} className="btn btn-primary w-100 mt-3">Deposit</Button>
-          <Button onClick={() => navigate("/about")} className="btn btn-primary w-100 mt-3">Check Balance</Button>
+          <Button onClick={() => navigate("/deposit")} className="btn btn-primary w-100 mt-3">Deposit</Button>
+          <Button onClick={() => navigate("/balance")} className="btn btn-primary w-100 mt-3">Check Balance</Button>
           </Card.Body>
 
     </Card>
