@@ -40,7 +40,7 @@ export default function Withdraw() {
     if (index >= 0) {
       if (
         balNumRef.current.value <= 50000 &&
-        data.cards.card[index].balance[0] - balNumRef.current.value > 0 &&
+        data.cards.card[index].balance[0] - balNumRef.current.value >= 0 &&
         balNumRef.current.value > 0
       ) {
         console.log(

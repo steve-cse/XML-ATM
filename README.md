@@ -1,15 +1,28 @@
-# Getting Started with Create React App
+<p align="center">
+   <img width="160" height="160" src="https://raw.githubusercontent.com/steve-cse/XML-ATM/master/public/logo512.png" alt="Logo">
+  </p>
+  <h1 align="center"><b>Electron XML-ATM</b></h1>
+<p align="center">
+  Micro Project for Advanced Database Management (221TCS001)
+</p>
+  <p align="center">
+  Checkout the latest release.
+    <br />
+    <a href="https://github.com/steve-cse/XML-ATM/releases/"><strong>Releases »</strong></a>
+    <br />
+    <br />
+ATM simulation using React and Electron JS. The project uses electron js to interact with node js file system coz react can't :) All the modifications are done to local XML files to simulate a database. 
+    <br />
+    <br />
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+# Developer Guide
 ## Available Scripts
 
 In the project directory, you can run:
 
 ### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Runs the app in the development mode.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
