@@ -36,7 +36,7 @@ export default function CheckBal() {
       }
     }
     if (index >= 0) {
-      setcurrbal('Your current balance: ₹ ' + data.cards.card[index].balance[0])
+      setcurrbal('Your current balance: ₹' + data.cards.card[index].balance[0])
     } else {
       console.log('Index is still -1')
     }

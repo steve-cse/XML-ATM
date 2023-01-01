@@ -2,7 +2,7 @@
 <cards>
   <card>
     <number>1234-5678-9012-3456</number>
-    <balance>2500</balance>
+    <balance>1000</balance>
     <name>John Smith</name>
   </card>
   <card>
@@ -22,7 +22,7 @@
   </card>
   <card>
     <number>4916-3050-2688-4060</number>
-    <balance>7888</balance>
+    <balance>8088</balance>
     <name>Jessica Park</name>
   </card>
   <card>

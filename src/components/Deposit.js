@@ -69,7 +69,7 @@ export default function Deposit() {
         console.log('balance.xml has been modified')
         setError('')
         setMessage(
-          '₹ ' + depNumRef.current.value + ' was added to your account',
+          '₹' + depNumRef.current.value + ' was added to your account',
         )
       }
     })
